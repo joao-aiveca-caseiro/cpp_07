@@ -1,5 +1,6 @@
 SRCS		= main.cpp
-INCS		= templates.hpp
+INCS		= templates.hpp\
+				iter.hpp
 OBJS		= ${SRCS:.cpp=.o}
 NAME		= test
 CXX			= c++
