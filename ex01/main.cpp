@@ -17,7 +17,6 @@ int main( void )
 {
 	int		array_a[] = {2, 4, 6, 8, 0};
 	char	array_b[] = {'a', 'b', 'c', 'd', 'e'};
-	std::string	array_c[] = {"An", "array", "of", "strings"};
 	
 	std::cout << "-- Array A --" << std::endl;
 	iter(array_a, 5, print);

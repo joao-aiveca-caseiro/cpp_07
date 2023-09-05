@@ -14,12 +14,16 @@ template <typename T>
 Array<T>::Array(): _size(0)
 {
 	_contents = new T[_size];
+	if (!_contents)
+		std::cout << "Error allocating memory." << std::endl;
 }
 
 template <typename T>
 Array<T>::Array(unsigned int n): _size(n)
 {
 	_contents = new T[_size];
+	if (!_contents)
+		std::cout << "Error allocating memory." << std::endl;
 }
 
 template <typename T>
@@ -31,6 +35,12 @@ Array<T>::Array(const Array &target)
 	{
 		_contents[i] = target[i];
 	}
+}
+
+template <typename T>
+Array<T>::~Array()
+{
+	delete[] _contents;
 }
 
 template <typename T>

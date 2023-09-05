@@ -21,6 +21,7 @@ class Array
 		Array();
 		Array(unsigned int n);
 		Array(const Array &target);
+		~Array();
 
 		Array &operator=(const Array &target);
 		T &operator[](int n) const;
